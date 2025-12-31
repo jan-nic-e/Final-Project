@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for Dinner</title>
+    <link rel="stylesheet" href="randomRecipe.css">
+</head>
+<body>
+     <header>
+        <div class="site__title">
+            <h1>Recipe Rescue</h1>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li><a class="nav__link nav__link--anchor" href="randomRecipe.html">Get Random Recipe</a></li>
+                <li><a class="nav__link nav__link--search" href="recipeSearch.html">Search Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="placeholder__container">
+        <img  id="placeholder__img" src="https://media.istockphoto.com/id/1386207401/photo/steam-coming-from-a-cooking-pot-and-mixing-with-wooden-spoon.jpg?s=612x612&w=0&k=20&c=Cu0qCLQ_u7tuoRFlWHFFLPrOoTvQ5EJuwQvFfPvIDlQ=" alt="">
+    <div id="recipe-container"></div>
+    <div id="recipe-details-container"></div>
+    <div class="button__container">
+    <button onclick="fetchRandomRecipe()">Get Random Recipe</button>
+    </div>
+    </div>
+    <script src="randomRecipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recipeSearch.css">
+</head>
+<body>
+    <header>
+        <div class="site__title">
+            <h1>Recipe Rescue</h1>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li><a class="nav__link nav__link--anchor" href="randomRecipe.html">Get Random Recipe</a></li>
+                <li><a class="nav__link nav__link--search" href="recipeSearch.html">Search Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="meal-search">
+     <label for="category-select">Filter by Category:</label>
+            <select id="category-select">
+                <option value="">Select a category</option>
+                <!-- <option value="beef">Beef</option>
+                <option value="chicken">Chicken</option>
+                <option value="dessert">Dessert</option>
+                <option value="lamb">Lamb</option>
+                <option value="miscellaneous">Miscellaneous</option>
+                <option value="pasta">Pasta</option>
+                <option value="pork">Pork</option>
+                <option value="seafood">Seafood</option>
+                <option value="side">Side</option>
+                <option value="starter">Starter</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="goat">Goat</Goat> -->
+            </select>
+    <input type="text" id="meal-name-input" placeholder="Search recipe name">
+    <button id="search-button">Search</button>
+    </div>
+    <div id="meal-results">
+    </div>
+    <script src="recipeSearch.js"></script>
+</body>
+</html>
