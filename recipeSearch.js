@@ -65,15 +65,24 @@ const searchMeals = async (mealName, category) => {
     }
 };
 
+const searchButton = document.getElementById('search-button');
+searchButton.addEventListener("click", searchMeals() {
+    const mealName = document.getElementById(meal-name-input).value;
+    const category = document.getElementById(category-select).value;
+});
+
+const mealResults = searchMeals(mealName, category);
+
 // Display filtered meals in the results div
-function displayMeals(meals) {
+function displayMeals(mealResults) {
+    const mealResultsDiv = document.getElementById('meal-results')
     mealResultsDiv.innerHTML = '';
-    if (meals.length === 0) {
+    if (mealResults.length === 0) {
         mealResultsDiv.innerHTML = '<p>No meals found matching your criteria.</p>';
         return;
     }
 
-    meals.forEach(meal => {
+    mealResults.forEach(meal => {
         const mealCard = document.createElement('div');
         mealCard.innerHTML = `
             <h3>${meal.strMeal}</h3>
@@ -82,6 +91,3 @@ function displayMeals(meals) {
         mealResultsDiv.appendChild(mealCard);
     });
 }
-
-const searchButton = document.getElementById('search-button');
-searchButton.addEventListener('click', searchMeals);
