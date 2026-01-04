@@ -66,12 +66,13 @@ const searchMeals = async (mealName, category) => {
 };
 
 const searchButton = document.getElementById('search-button');
-searchButton.addEventListener("click", searchMeals() {
-    const mealName = document.getElementById(meal-name-input).value;
-    const category = document.getElementById(category-select).value;
+searchButton.addEventListener("click", async () => {
+    const mealName = document.getElementById('meal-name-input').value;
+    const category = document.getElementById('category-select').value;
+    
+    const mealResults = await searchMeals(mealName, category);
+    displayMeals(mealResults);
 });
-
-const mealResults = searchMeals(mealName, category);
 
 // Display filtered meals in the results div
 function displayMeals(mealResults) {
@@ -85,9 +86,23 @@ function displayMeals(mealResults) {
     mealResults.forEach(meal => {
         const mealCard = document.createElement('div');
         mealCard.innerHTML = `
-            <h3>${meal.strMeal}</h3>
-            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" width="100">
+            <h3 id="meal-heading">${meal.strMeal}</h3>
+            <img id="meal-img" src="${meal.strMealThumb}" alt="${meal.strMeal}" width="200">
+            <a id="recipe-link" href="selectedMeal.html">Take Me to Recipe</a>
         `;
         mealResultsDiv.appendChild(mealCard);
     });
 }
+
+/* const headingElement = document.getElementById('meal-heading');
+if (headingElement) {
+    headingElement.style.fontSize = '14px';
+    headingElement.style.maxWidth = '120px';
+    headingElement.style.textAlign = 'center';
+    headingElement.style.marginBottom = '8px';
+}
+
+const imageElement = document.getElementById('meal-img');
+if (imageElement) {
+    imageElement.style.padding = '10px';    
+} */

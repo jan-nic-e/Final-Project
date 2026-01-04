@@ -7,6 +7,10 @@
 
 body {
     background-color: #606060;
+    height: 100vh;           /* Ensures the body takes up the full viewport height */
+    display: grid;           /* Turns the body into a grid container */
+    place-items: center;     /* Centers the child (the .grid-container) both vertically and horizontally */
+    margin: 0;               /* Removes default body margins */
 }
 
 ul {
@@ -47,10 +51,13 @@ header {
 }
 
 #meal-results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    gap: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
     }
 
 #meal-search {
@@ -78,11 +85,30 @@ header {
 }
 
 .meal-card {
-    height: 400px;
+    height: 600px;
     width: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+}
+
+#meal-img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+#meal-heading {
+    max-width: 250px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#recipe-link {
+    text-align: center;
 }
 
 select {

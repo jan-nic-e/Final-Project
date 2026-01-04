@@ -9,8 +9,8 @@ body {
     background-color: #606060;
 }
 
-ul {
-    list-style-type: none;
+.nav__links {
+   list-style-type: none; 
 }
 
 a {

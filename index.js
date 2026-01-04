@@ -45,10 +45,11 @@ async function fetchRandomRecipe() {
             const detailsData = await fetchRecipeDetails(recipeId);
             const ingredientsList = document.createElement('ul');
             for (let i = 1; i <= 20; i++) {
-                const ingredient = detailsData.meals[0][`strIngredient${i}`];
-                if (ingredient && ingredient.trim() !== '') {
+                const ingredient = detailsData.meals[0][`strIngredient${i}`]?.trim();
+                const measurement = detailsData.meals[0][`strMeasure${i}`]?.trim();
+                if (ingredient) {
                     const ingredientItem = document.createElement('li');
-                    ingredientItem.textContent = ingredient;
+                    ingredientItem.textContent = measurement ? `${measurement} ${ingredient}` : ingredient;
                     ingredientsList.appendChild(ingredientItem);
                 }
             }
