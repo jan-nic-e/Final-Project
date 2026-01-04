@@ -86,8 +86,8 @@ function displayMeals(mealResults) {
     mealResults.forEach(meal => {
         const mealCard = document.createElement('div');
         mealCard.innerHTML = `
-            <h3 id="meal-heading">${meal.strMeal}</h3>
-            <img id="meal-img" src="${meal.strMealThumb}" alt="${meal.strMeal}" width="200">
+            <h3 id="meal-heading">${meal.strMeal}</h3><br>
+            <img id="meal-img" src="${meal.strMealThumb}" alt="${meal.strMeal}"><br>
             <a id="recipe-link" href="selectedMeal.html">Take Me to Recipe</a>
         `;
         mealResultsDiv.appendChild(mealCard);
