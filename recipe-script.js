@@ -15,7 +15,7 @@ async function fetchAndDisplayRecipe() {
 
   try {
     // Fetch details for the specific ID
-    const response = await fetch(`www.themealdb.com{mealId}`);
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=(mealId)`);
     const data = await response.json();
     const meal = data.meals[0];
 
