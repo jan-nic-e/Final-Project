@@ -88,7 +88,7 @@ function displayMeals(mealResults) {
         mealCard.innerHTML = `
             <h3 id="meal-heading">${meal.strMeal}</h3><br>
             <img id="meal-img" src="${meal.strMealThumb}" alt="${meal.strMeal}"><br>
-            <a id="recipe-link" href="selectedMeal.html">Take Me to Recipe</a>
+            <a id="recipe-link" href=`recipe.html?meal_id=${meal.idMeal}`>Take Me to Recipe</a>
         `;
         mealResultsDiv.appendChild(mealCard);
     });
